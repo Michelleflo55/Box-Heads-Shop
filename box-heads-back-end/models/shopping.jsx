@@ -1,6 +1,6 @@
 const { Schema } = require('mongoose')
 
-const Shopping = new Schema(
+const ShoppingCart = new Schema(
     {
         id: { type: Number, required:true },
         price: {type: Number, required: true},
@@ -9,4 +9,4 @@ const Shopping = new Schema(
     { timestamps: true }
 )
 
-module.exports = Shopping
+module.exports = ShoppingCart
