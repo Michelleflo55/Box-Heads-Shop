@@ -1,11 +1,11 @@
 const mongoose = require('mongoose')
-const ItemSchema = require('./Item')
-const ShoppingCartSchema = require('./ShoppingCart')
+const ItemSchema = require('./item')
+const ShoppingSchema = require('./shopping')
 
 const Item = mongoose.model('items', ItemSchema)
-const ShoppingCart = mongoose.mode('shopping', ShoppingCartSchema)
+const Shopping = mongoose.mode('shopping', ShoppingSchema)
 
 module.exports = {
    Item,
-   ShoppingCart
+   Shopping
 }

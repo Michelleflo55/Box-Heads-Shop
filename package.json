@@ -1,6 +1,7 @@
 {
   "dependencies": {
-    "express": "^4.17.3"
+    "express": "^4.17.3",
+    "mongoose": "^6.2.9"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
@@ -8,5 +9,20 @@
   "scripts": {
     "start": "node server.js",
     "dev": "nodemon server.js"
-  }
+  },
+  "name": "box-heads-shop",
+  "description": "<p align=\"center\" width=\"350px\">     <img width=\"50%\" src=\"https://i.ibb.co/rb6FKBR/Box-Heads-Logo.png\"> </p> <h1 align=\"center\"> App By: Michelle Flores",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michelleflo55/Box-Heads-Shop.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Michelleflo55/Box-Heads-Shop/issues"
+  },
+  "homepage": "https://github.com/Michelleflo55/Box-Heads-Shop#readme"
 }
