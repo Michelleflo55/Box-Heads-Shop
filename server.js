@@ -1,3 +1,4 @@
+const { urlencoded } = require('body-parser');
 const express = require('express');
 const db = require('./db');
 
@@ -6,8 +7,9 @@ const {Item, Shopping } = require('./models');
 const PORT = process.env.PORT || 3001
 
 const app = express()
-//My code goes here
 
+//My code goes here
+app.use(urlencoded({require: false}))
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -19,10 +21,18 @@ app.get('/shop', async (request, response) => {
    
   response.json(items)
 
-})
+});
 
-app.post('/cart', (request, response)=> {
-      console.log('we are in the carts')
+app.post('/cart', async(request, response)=> {
+    console.log(request.body.id)
+  const itemAdded = await Item.findById(request.body.id)
+    let newCart = await Shopping.create({
+        price:30
+    })
+    newCart.items.push(itemAdded)
+    newCart.save()
+   response.send(newCart)    
+
 })
 
 // Code ends here 
