@@ -10,6 +10,7 @@ const app = express()
 
 //My code goes here
 app.use(urlencoded({require: false}))
+app.use(express.static(`${__dirname}/client/build`))
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
@@ -34,7 +35,9 @@ app.post('/cart', async(request, response)=> {
    response.send(newCart)    
 
 })
-
+app.get('/*', (req, res) => {
+  res.sendFile(`${__dirname}/client/build/index.html`)
+ })
 // Code ends here 
 app.listen(PORT, () => console.log(`Server Listening on port: ${PORT}`))
 
