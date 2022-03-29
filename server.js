@@ -10,12 +10,13 @@ const app = express()
 
 //My code goes here
 app.use(cors()) 
+// app.use(express.json())
 app.use(urlencoded({require: false}))
 app.use(express.static(`${__dirname}/client/build`))
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
-// app.use(express.json())
+
 
 app.get('/shop', async (request, response) => {
   
@@ -24,6 +25,7 @@ app.get('/shop', async (request, response) => {
   response.json(items)
 
 });
+
 
 app.post('/cart', async(request, response)=> {
     console.log(request.body.id)
