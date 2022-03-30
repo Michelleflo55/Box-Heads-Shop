@@ -1,13 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
-import { Routes, Route } from 'react-router-dom'
+import axios from 'axios'
+import {useEffect} from 'react'
+import Button from './components/Button';
 
 function App() {
+  const getItems = async () => {
+    let items = await axios.get('http://localhost:3001/shop')
+    console.log(items)
+  }
+
+  useEffect(()=>{
+    getItems()
+  },[])
+  
+  
   return (
     <div>
-      <h1>
-      </h1>
-
+      {/* <img src="https://i.ibb.co/QPDK3VD/LOGO.png" className="boxHead" alt="logo"/> */}
+      <div className='flex-container'>
+        <h1 className='nft'>
+          Learn about NFTS
+        </h1>
+       <h1 className='shop'>Shop</h1>
+      </div>
     </div>
   );
 }
