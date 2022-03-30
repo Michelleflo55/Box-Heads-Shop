@@ -4,12 +4,11 @@ body {
 
 }
 .boxHead{
-  text-align: center;
   display: block;
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 46% ;
+  width: 47% ;
   height:auto
 }
 
@@ -34,7 +33,7 @@ body {
   text-align: center;
   display: block;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-self: flex-end;
   margin:auto;
   font-size: 100px;
   height: 100px;
