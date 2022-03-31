@@ -15,9 +15,11 @@ const Item = () => {
         const res = await axios.get(`http://localhost:3001/item/${id}`)
         console.log(res.data[0])
         setItem(res.data[0])
-       
     }
-   
+    
+    
+
+
 
     useEffect(() => {
         console.log('hello')
@@ -28,10 +30,13 @@ const Item = () => {
         <div>
           <div className="rightItem">
               <h1>
-              <Link to="/items">Back to Merch</Link>  
+                <Link to="/items">Back to Merch</Link>  
               </h1>
               <h1>
-              <Link to="/">Home</Link>
+                <Link to="/">Home</Link>
+              </h1>
+              <h1>
+                <button onClick={''}>Add to Cart</button>
               </h1>
           </div>  
           <div className='leftItem'>

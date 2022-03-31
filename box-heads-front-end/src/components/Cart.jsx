@@ -13,4 +13,4 @@ const Cart = () => {
 }
 export default Cart
 
-//show items in cart
+//add a button show items in cart

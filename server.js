@@ -37,17 +37,37 @@ app.get('/items', async (request, response) => {
 
 
 
+// app.post('/cart', async(request, response)=> {
+//     console.log(request.body.id)
+//   const itemAdded = await Item.findById(request.body.id)
+//     let newCart = await Shopping.create({
+//         price:30
+//     })
+//     newCart.items.push(itemAdded)
+//     newCart.save()
+//    response.send(newCart)    
+
+// })
+
 app.post('/cart', async(request, response)=> {
-    console.log(request.body.id)
-  const itemAdded = await Item.findById(request.body.id)
-    let newCart = await Shopping.create({
-        price:30
-    })
-    newCart.items.push(itemAdded)
-    newCart.save()
-   response.send(newCart)    
+  console.log(request.body.id)
+const itemAdded = await Item.findById(request.body.id)
+  let newCart = await Shopping.create({
+      price:30
+  })
+  newCart.items.push(itemAdded)
+  newCart.save()
+ response.send(newCart)    
 
 })
+
+
+
+
+
+
+
+
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`)
  })
