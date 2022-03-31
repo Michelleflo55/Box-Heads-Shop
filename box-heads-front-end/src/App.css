@@ -8,8 +8,8 @@ body {
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 47% ;
-  height:auto
+  width: 700px ;
+  height:1070px
 }
 
 .nft{
@@ -36,7 +36,7 @@ body {
   align-self: flex-end;
   margin:auto;
   font-size: 100px;
-  height: 100px;
+  height: 120px;
   width:700px;
 }
 .flex-container {
