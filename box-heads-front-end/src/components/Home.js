@@ -1,5 +1,11 @@
 
+import { Link } from 'react-router-dom'
+
 function Home() {
+
+ 
+  
+
   return (
     <div className="flex-container">
         <div className="left-column">
@@ -9,7 +15,8 @@ function Home() {
             <img src="https://i.ibb.co/QPDK3VD/LOGO.png" className="boxHead" alt="logo"/>
         </div>
         <div className='right-column'>
-            <h1 className='shop'>Shop</h1>
+          <Link to="/items">Items</Link>
+                
         </div>
     </div>
   )
