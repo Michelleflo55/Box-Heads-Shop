@@ -18,6 +18,8 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 
 
+
+
 app.get('/shop', async (request, response) => {
   
     const items = await Item.find({})

@@ -1,30 +1,41 @@
 import './App.css';
+import React, {useState, useEffect} from 'react';
 import axios from 'axios'
-import {useEffect} from 'react'
+import { Routes, Route } from 'react-router-dom'
+import Home from './components/Home';
+import Questions from './components/Questions'
+import Answers from './components/Answers';
+import { useNavigate } from 'react-router-dom';
 
+const App=()=> {
+  const [items, setItems] = useState([])
 
-function App() {
   const getItems = async () => {
-    let items = await axios.get('http://localhost:3001/shop')
+    let items = await axios.get('http://localhost:3000/shop')
     console.log(items)
+    setItems()
   }
-
   useEffect(()=>{
     getItems()
   },[])
   
   
-  return (
-    <div>
-      <div className='flex-container'>
-        <h1 className='nft'>
-          Learn about NFTS
-        </h1>
-        <img src="https://i.ibb.co/QPDK3VD/LOGO.png" className="boxHead" alt="logo"/>
-       <h1 className='shop'>Shop</h1>
-      </div>
+return (
+ <div className='App'>
+  <header>
+    
+  </header>
+    <main>
+      <Routes>
+        <Route path='/' element={ <Home /> } />
+    
+      </Routes>
+
+    </main>
       
-    </div>
+      
+      
+ </div>
   );
 }
 
