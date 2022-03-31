@@ -1,6 +1,5 @@
-import React from 'react'
 import { useState, useEffect } from 'react'
-
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 const Items = () => {
@@ -18,19 +17,25 @@ const Items = () => {
        getAllItems();
     }, [])  
 
-   
 
     return (
         <div>
-            <h2>Items</h2>
+            <h1><Link to="/">Home</Link> </h1>
+            <h1>WAW MERCH</h1>
             {items.map((item)=>(
-                <h1>{item.name}</h1>
+               <div> 
+                 <h1>{item.name}</h1>
+                    <div> 
+                       <Link to={`/items/${item._id}`}>  
+                        <img src={item.image} />
+                        </Link>  
+                    </div>
+                </div>
             ))}
-            {items.map((item)=>(
-                <h1>{item.price}</h1>
-            ))}
+            
         </div>
     )
 }
 
 export default Items
+

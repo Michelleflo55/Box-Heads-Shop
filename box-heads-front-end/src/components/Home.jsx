@@ -1,4 +1,3 @@
-// import Items from './Items'
 import { Link } from 'react-router-dom'
 
 function Home() {
@@ -15,8 +14,7 @@ function Home() {
             <img src="https://i.ibb.co/QPDK3VD/LOGO.png" className="boxHead" alt="logo"/>
         </div>
         <div className='right-column shop'>
-          <Link to="/items">Items</Link>
-          {/* <Items items={ Items} /> */}
+          <Link to="/items">Shop</Link>
         </div>
     </div>
   )

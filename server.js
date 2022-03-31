@@ -18,7 +18,13 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
 
 
+app.get('/item/:id', async (request, response) => {
+  console.log(request.params)
+  const item = await Item.find({_id:request.params.id})
+    console.log(item)
+response.json(item)
 
+});
 
 app.get('/items', async (request, response) => {
   
@@ -27,6 +33,8 @@ app.get('/items', async (request, response) => {
   response.json(items)
 
 });
+
+
 
 
 app.post('/cart', async(request, response)=> {
