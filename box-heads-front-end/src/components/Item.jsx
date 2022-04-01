@@ -47,7 +47,7 @@ const Item = (props) => {
                   <Link to="/cart/:id">View Cart</Link>
                   </h1>  
                 <h1>
-                  <button onClick={updateCart}>Add to Cart</button>
+                  <button onClick={updateCart} class="block">Add to Cart</button>
                 </h1>
               </div> 
             </div>      
