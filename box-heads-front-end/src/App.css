@@ -63,4 +63,12 @@ header{
     justify-content: center;
     margin:1%;
 }
-
+/* 
+hover link: https://stackoverflow.com/questions/46102586/change-default-color-of-link-from-blue-to-white
+*/
+a {
+    color: #FFF;
+  }
+  a:hover {
+     color: rgb(251, 12, 12)
+  }
