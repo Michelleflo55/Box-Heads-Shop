@@ -34,7 +34,7 @@ const Item = (props) => {
     }, [] )
 
     return(
-        <div>
+        <div className="font">
           <div className="flex">
               <h1>
                 <Link to="/items">Back to Merch</Link>  
@@ -47,7 +47,7 @@ const Item = (props) => {
                 <button onClick={updateCart}>Add to Cart</button>
               </h1>
           </div>  
-          <div className=''>
+          <div className='Item'>
              <h2>{item.name}</h2>
              <h3>{item.price} Eth</h3>
              <h3>{item.description}</h3>

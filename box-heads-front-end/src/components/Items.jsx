@@ -19,7 +19,7 @@ const Items = () => {
 
 
     return (
-        <div>
+        <div className="font">
             <header>WAW MERCH</header>
             <h1 class="homeLink"><Link to="/">Home</Link> </h1>
                <div class="flex">            

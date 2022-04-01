@@ -20,7 +20,7 @@ function Home(props) {
     }, []) 
   
   return (
-    <div>
+    <div className="font">
       <header>Welcome</header>
       <div className="flex">
           <div className="left-column">

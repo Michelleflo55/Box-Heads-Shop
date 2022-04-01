@@ -44,3 +44,13 @@ header{
     text-align:right;
     margin-right: 100px;
 }
+
+.Item{
+  margin-left:50px;
+  text-align:  center;
+  font-size: x-large;
+  font-family: cursive;
+}
+.font{
+    font-family: cursive;
+}
