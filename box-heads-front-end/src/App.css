@@ -7,12 +7,35 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: space-around;
+    flex: 2 1 auto;
+    flex-grow: auto;
+    flex-shrink: auto;
+    padding:2%;
+    margin: 1%
 }
 
 .left-column{
-    background-image:url("https://i.ibb.co/bdpqqyd/istockphoto-1164830992-170667a.jpg");
-    background-size: 6000px 150px;
-    background-repeat: no-repeat;
+    border:20px solid red;
     font-size: 30px;
-   
+    padding:10%
+}
+
+.middle-column{
+    padding:10%;
+  
+}
+
+.right-column{
+    padding:10%;
+    font-size:30px;
+    border:20px solid red;
+}
+
+header{
+    font-size: 100px;
+    font-family:cursive;
+    border:20px solid rgb(251, 113, 182);
+    text-align: center;
+    justify-content: center;
+    margin:1%
 }
