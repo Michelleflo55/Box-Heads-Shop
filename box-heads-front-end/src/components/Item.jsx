@@ -35,11 +35,11 @@ const Item = (props) => {
 
     return(
         <div>
-          <div className="rightItem">
+          <div className="flex">
               <h1>
                 <Link to="/items">Back to Merch</Link>  
               </h1>
-              <h1>
+              <h1 className="homeLink">
                 <Link to="/">Home</Link>
               </h1>
               <Link to="/cart/:id">View Cart</Link>
@@ -47,7 +47,7 @@ const Item = (props) => {
                 <button onClick={updateCart}>Add to Cart</button>
               </h1>
           </div>  
-          <div className='leftItem'>
+          <div className=''>
              <h2>{item.name}</h2>
              <h3>{item.price} Eth</h3>
              <h3>{item.description}</h3>
