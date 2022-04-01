@@ -24,7 +24,8 @@ function Home(props) {
       <header>Welcome</header>
       <div className="flex">
           <div className="left-column">
-              <h1 className='nft'>Learn about NFTS</h1>   
+            <h1 className='nft'>Learn about NFTS</h1> 
+            <h5>More info coming soon!</h5>
           </div>
           <div className="middle-column">
               <img src="https://i.ibb.co/QPDK3VD/LOGO.png" className="boxHead" alt="logo"/>

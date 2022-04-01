@@ -17,7 +17,7 @@ const Cart = (props) => {
     
     return(
         <div>
-            Hello
+           
         </div>
     )
 

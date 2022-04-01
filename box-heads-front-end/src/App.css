@@ -1,5 +1,5 @@
 body{
-    background-color: rgb(196, 3, 100);
+    background-color: rgb(217, 0, 109);
     
 }
 
@@ -16,7 +16,7 @@ body{
 }
 
 .left-column{
-    border:20px solid red;
+    border:20px solid rgb(251, 113, 182);
     font-size: 30px;
     padding:10%
 }
@@ -29,7 +29,7 @@ body{
 .right-column{
     padding:10%;
     font-size:30px;
-    border:20px solid red;
+    border:20px solid rgb(251, 113, 182);
 }
 
 header{
@@ -70,7 +70,7 @@ a {
     color: rgb(0, 0, 0);
   }
   a:hover {
-     color: rgb(220, 236, 0)
+     color: rgb(0, 191, 238)
   }
 /* 
 Button decoration: https://www.w3schools.com/howto/howto_css_block_buttons.asp
@@ -79,7 +79,7 @@ Button decoration: https://www.w3schools.com/howto/howto_css_block_buttons.asp
     display: block;
     width: 100%;
     border: 5px solid black;
-    background-color: #fef439;
+    background-color: #f172c7;
     padding: 16px 28px;
     font-size: 20px;
     cursor:pointer;
