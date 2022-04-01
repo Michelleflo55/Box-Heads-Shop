@@ -35,18 +35,20 @@ const Item = (props) => {
 
     return(
         <div className="font">
-          <div className="flex">
-              <h1>
-                <Link to="/items">Back to Merch</Link>  
-              </h1>
-              <h1 className="homeLink">
-                <Link to="/">Home</Link>
-              </h1>
-              <Link to="/cart/:id">View Cart</Link>
-              <h1>
-                <button onClick={updateCart}>Add to Cart</button>
-              </h1>
-          </div>  
+          <div className="header">
+              <div className="flex">
+                  <h1>
+                    <Link to="/items">Back to Merch</Link>  
+                  </h1>
+                  <h1 className="homeLink">
+                    <Link to="/">Home</Link>
+                  </h1>
+                  <Link to="/cart/:id">View Cart</Link>
+                  <h1>
+                    <button onClick={updateCart}>Add to Cart</button>
+                  </h1>
+               </div> 
+            </div>      
           <div className='Item'>
              <h2>{item.name}</h2>
              <h3>{item.price} Eth</h3>
