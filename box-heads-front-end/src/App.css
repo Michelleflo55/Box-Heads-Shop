@@ -8,3 +8,11 @@ body{
     flex-direction: row;
     justify-content: space-around;
 }
+
+.left-column{
+    background-image:url("https://i.ibb.co/bdpqqyd/istockphoto-1164830992-170667a.jpg");
+    background-size: 300px;
+    background-repeat: no-repeat;
+    font-size: 30px;
+    position:relative
+}

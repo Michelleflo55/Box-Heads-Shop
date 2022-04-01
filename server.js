@@ -53,7 +53,7 @@ app.put('/cart/:id', async(request, response)=> {
 })
 
 
-
+//create get request
 app.get('/cart/:id', async (request, response) => {
   console.log(request.params)
   const cart = await Shopping.find({_id:request.params.id})

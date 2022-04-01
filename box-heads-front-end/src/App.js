@@ -20,7 +20,7 @@ return (
         <Route path='/' element={ <Home setCartId={setCartId} /> } />
         <Route path='/items' element={ <Items />} />
         <Route path='/items/:id' element={ <Item cartId={cartId} />} />
-        <Route path='/cart/:id' element={ <Cart />} />
+        {/* <Route path='/cart/:id' element={ <Cart />} /> */}
       </Routes>
 
     </main>
