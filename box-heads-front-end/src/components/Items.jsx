@@ -20,19 +20,20 @@ const Items = () => {
 
     return (
         <div>
-            <h1><Link to="/">Home</Link> </h1>
-            <h1>WAW MERCH</h1>
-            {items.map((item)=>(
-               <div> 
-                 <h1>{item.name}</h1>
+            <h1 class="homeLink"><Link to="/">Home</Link> </h1>
+            <header>WAW MERCH</header>
+               <div class="flex">            
+                    {items.map((item)=>(
                     <div> 
-                       <Link to={`/items/${item._id}`}>  
-                        <img src={item.image} />
-                        </Link>  
-                    </div>
-                </div>
-            ))}
-            
+                        <h1>{item.name}</h1>
+                            <div> 
+                            <Link to={`/items/${item._id}`}>  
+                                <img src={item.image} />
+                                </Link>  
+                            </div>
+                        </div>
+                    ))}
+                </div> 
         </div>
     )
 }
