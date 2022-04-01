@@ -1,49 +1,10 @@
-   
-body {
- background-color: rgb(182, 0, 70);
-
-}
-.boxHead{
-  display: block;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 700px ;
-  height:1070px
+body{
+    background-color: rgb(196, 3, 100);
+    
 }
 
-.nft{
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.PEQKfQiHd_8B65HCzK8n_QHaEV%26pid%3DApi&f=1");
-  background-color: #cccccc;
-  /* background-repeat: no-repeat; */
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-align: center;
-  display: block;
-  justify-content: flex-start;
-  align-items: flex-start;
-  margin:auto;
-  font-size: 100px;
-  height: 100px;
-  width:700px;
-}
-.shop{
-  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.mm.bing.net%2Fth%3Fid%3DOIP.PEQKfQiHd_8B65HCzK8n_QHaEV%26pid%3DApi&f=1");
-  background-color: #cccccc;
-  font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  text-align: center;
-  display: block;
-  justify-content: flex-end;
-  align-self: flex-end;
-  margin:auto;
-  font-size: 100px;
-  height: 120px;
-  width:700px;
-}
-.flex-container {
-  display: flex;
-  height: 800px;
-  flex-wrap: wrap;
-  align-content: space-between;
-  max-width: fit-content;
-  min-width: none;
+.flex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 }

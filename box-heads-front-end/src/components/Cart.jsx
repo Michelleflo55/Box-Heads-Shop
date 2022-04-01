@@ -1,16 +1,25 @@
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 
 
-const Cart = () => {
-
+const Cart = (props) => {
+    const [cart, setCart ] = useState()
+    const getCart = async () =>{
+        const res = await axios.put((`http://localhost:3001/cart/${props.cartId}`))
+        console.log(res.data)
+        setCart(res.data)
+    }
     
+   useEffect(() =>{
+       getCart();
+   })
+
     
     return(
         <div>
-            
+            Hello
         </div>
     )
 
 }
 export default Cart
-
-//add a button show items in cart

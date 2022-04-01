@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 
 
-const Item = () => {
+const Item = (props) => {
     const [ item, setItem ] = useState({})
     
     const {id} = useParams()
@@ -16,10 +16,17 @@ const Item = () => {
         console.log(res.data[0])
         setItem(res.data[0])
     }
-    
-    
 
+    //server.js Lines 48-52
+    const updateCart = async () => {
+      let itemToAdd = {
+        'id':item._id, 
+        'name':item.name
+      }
 
+      const res = await axios.put(`http://localhost:3001/cart/${props.cartId}`, itemToAdd)
+      console.log(res)
+    }
 
     useEffect(() => {
         console.log('hello')
@@ -35,8 +42,9 @@ const Item = () => {
               <h1>
                 <Link to="/">Home</Link>
               </h1>
+              <Link to="/cart/:id">View Cart</Link>
               <h1>
-                <button onClick={''}>Add to Cart</button>
+                <button onClick={updateCart}>Add to Cart</button>
               </h1>
           </div>  
           <div className='leftItem'>

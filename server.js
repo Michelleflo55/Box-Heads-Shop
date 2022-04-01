@@ -10,7 +10,7 @@ const app = express()
 
 //My code goes here
 app.use(cors()) 
-// app.use(express.json())
+app.use(express.json())
 app.use(urlencoded({require: false}))
 app.use(express.static(`${__dirname}/client/build`))
 
@@ -37,29 +37,52 @@ app.get('/items', async (request, response) => {
 
 
 
-// app.post('/cart', async(request, response)=> {
-//     console.log(request.body.id)
-//   const itemAdded = await Item.findById(request.body.id)
-//     let newCart = await Shopping.create({
-//         price:30
-//     })
-//     newCart.items.push(itemAdded)
-//     newCart.save()
-//    response.send(newCart)    
+app.post('/cart', async(request, response)=> {
+    console.log(request.body)
+    const cart = await Shopping.create({'price':0})
+    cart.save()
+    console.log(cart)
+    response.send(cart)
+})
 
+app.put('/cart/:id', async(request, response)=> {
+    const cart= await Shopping.find({_id:request.params.id})
+    cart[0].items.push(request.body.id)
+    cart[0].save()
+    response.send(cart[0])
+})
+
+
+
+app.get('/cart/:id', async (request, response) => {
+  console.log(request.params)
+  const cart = await Shopping.find({_id:request.params.id})
+  cart[0].items.push(request.body.id)  
+  console.log(cart)
+response.json(cart[0])
+
+});
+
+
+// app.put('/cart/:id', async(request, response)=> {
+//   const cart= await Shopping.find({_id:request.params.id})
+//   console.log(cart[0].items)
+//   console.log(request.body)
 // })
 
-app.post('/cart', async(request, response)=> {
-  console.log(request.body.id)
-const itemAdded = await Item.findById(request.body.id)
-  let newCart = await Shopping.create({
-      price:30
-  })
-  newCart.items.push(itemAdded)
-  newCart.save()
- response.send(newCart)    
 
-})
+
+// app.post('/item/:id/cart', async(request, response)=> {
+//   console.log(request.body.id)
+// const itemAdded = await Item.findById(request.body.id)
+//   let newCart = await Shopping.create({
+//       price:30
+//   })
+//   newCart.items.push(itemAdded)
+//   newCart.save()
+//  response.send(newCart)    
+
+// })
 
 
 
