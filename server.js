@@ -64,33 +64,6 @@ response.json(cart[0])
 });
 
 
-// app.put('/cart/:id', async(request, response)=> {
-//   const cart= await Shopping.find({_id:request.params.id})
-//   console.log(cart[0].items)
-//   console.log(request.body)
-// })
-
-
-
-// app.post('/item/:id/cart', async(request, response)=> {
-//   console.log(request.body.id)
-// const itemAdded = await Item.findById(request.body.id)
-//   let newCart = await Shopping.create({
-//       price:30
-//   })
-//   newCart.items.push(itemAdded)
-//   newCart.save()
-//  response.send(newCart)    
-
-// })
-
-
-
-
-
-
-
-
 app.get('/*', (req, res) => {
   res.sendFile(`${__dirname}/client/build/index.html`)
  })

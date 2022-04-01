@@ -23,14 +23,14 @@ const Items = () => {
             <header>WAW MERCH</header>
             <h1 class="homeLink"><Link to="/">Home</Link> </h1>
                <div class="flex">            
-                    {items.map((item)=>(
-                    <div> 
-                        <h1>{item.name}</h1>
-                            <div> 
+                {items.map((item)=>(
+                     <div> 
+                       <h1>{item.name}</h1>
+                          <div> 
                             <Link to={`/items/${item._id}`}>  
-                                <img src={item.image} />
-                                </Link>  
-                            </div>
+                            <img src={item.image} />
+                            </Link>  
+                          </div>
                         </div>
                     ))}
                 </div> 
