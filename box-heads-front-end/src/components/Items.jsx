@@ -20,8 +20,8 @@ const Items = () => {
 
     return (
         <div>
-            <h1 class="homeLink"><Link to="/">Home</Link> </h1>
             <header>WAW MERCH</header>
+            <h1 class="homeLink"><Link to="/">Home</Link> </h1>
                <div class="flex">            
                     {items.map((item)=>(
                     <div> 
