@@ -7,7 +7,7 @@ const Cart = async (props) => {
   
 
 
-    const res = await axios.get((`http://localhost:3001/cart/}${id}`))
+    const res = await axios.get('http://localhost:3001/cart')
     console.log(res)
   
 

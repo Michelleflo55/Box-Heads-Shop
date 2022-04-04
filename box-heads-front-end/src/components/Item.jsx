@@ -24,7 +24,7 @@ const Item = (props) => {
         'name':item.name
       }
 
-      const res = await axios.put
+      const res = await axios.put('http://localhost:3001/cart')
       console.log(res)
     }
 
