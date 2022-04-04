@@ -28,9 +28,9 @@ App Preview
 <ol>
 
 ###  <li>  Create: Create a shopping cart & add merch you want to purchase.
-###     <li>Read: Click on nft and read description and definition of non-fungible-token and how it links to boxing. 
-###    <li> Update: Update your selection with buttons to click between 3 different shirt colors. 
-###     <li>Delete: Delete items from your cart and have an updated cart without having to refresh. 
+###     <li>Read: View items in cart. 
+###    <li> Update: Add or remove items from shopping cart. 
+###     <li>Delete: Delete cart. 
 </ol>   
 
 
@@ -58,13 +58,5 @@ App Preview
 
 
   ## **LINK TO [ERD](https://lucid.app/lucidchart/0d55d231-5a67-4155-8a4f-b67345ad9062/edit?beaconFlowId=C6840A3DC203BE03&invitationId=inv_6738c4f0-0ff5-4e4b-b328-772bc478c4b4&page=0_0#)**
-<p align="center" width="350px">
-    <img width="50%" src="https://i.ibb.co/5RqBp1v/RUSH-ERD.png">
-</p>
-
-
 &nbsp;
 ## **LINK TO [Component Diagram](https://lucid.app/lucidchart/36699062-fd26-40a6-b7eb-ced2e774e434/edit?beaconFlowId=0A9D6639745A96FB&invitationId=inv_5a2904fc-6a36-42f2-bc02-53e53bf0ef82&page=0_0#)**
-<p align="center" width="250px">
-<img width="50%" src="https://i.ibb.co/bLRWRgf/Activity-diagram.png">
-<p>

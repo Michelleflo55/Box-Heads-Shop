@@ -21,4 +21,3 @@ const Cart = async (props) => {
 }
 export default Cart
 
-
