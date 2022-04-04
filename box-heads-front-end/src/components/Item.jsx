@@ -12,19 +12,19 @@ const Item = (props) => {
         console.log('id:', id)
         
     const getItem = async () => {
-        const res = await axios.get(`http://localhost:3001/item/${id}`)
+        const res = await axios.get((`http://localhost:3001/item/${id}`))
         console.log(res.data[0])
         setItem(res.data[0])
     }
 
-    //server.js Lines 48-52
+    //put
     const updateCart = async () => {
       let itemToAdd = {
         'id':item._id, 
         'name':item.name
       }
 
-      const res = await axios.put(`http://localhost:3001/cart/${props.cartId}`, itemToAdd)
+      const res = await axios.put
       console.log(res)
     }
 

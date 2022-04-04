@@ -35,8 +35,6 @@ app.get('/items', async (request, response) => {
 });
 
 
-
-
 app.post('/cart', async(request, response)=> {
     console.log(request.body)
     const cart = await Shopping.create({'price':0})
@@ -45,6 +43,7 @@ app.post('/cart', async(request, response)=> {
     response.send(cart)
 })
 
+//adds items to single cart
 app.put('/cart/:id', async(request, response)=> {
     const cart= await Shopping.find({_id:request.params.id})
     cart[0].items.push(request.body.id)
@@ -53,10 +52,10 @@ app.put('/cart/:id', async(request, response)=> {
 })
 
 
-//create get request
-app.get('/cart/:id', async (request, response) => {
+//create get request for cart
+app.get('/cart/:id', async(request, response) => {
   console.log(request.params)
-  const cart = await Shopping.find({_id:request.params.id})
+  const cart = await Shopping.findById({_id:request.params.id})
   cart[0].items.push(request.body.id)  
   console.log(cart)
 response.json(cart[0])
