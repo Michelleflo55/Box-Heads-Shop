@@ -7,7 +7,9 @@ import { Link } from 'react-router-dom'
 
 const Item = (props) => {
     const [ item, setItem ] = useState({})
-    
+    const [newItem, setNewItem] = useState({
+      name:''
+    })
     const {id} = useParams()
         console.log('id:', id)
         
@@ -19,13 +21,16 @@ const Item = (props) => {
 
     //put
     const updateCart = async () => {
-      let itemToAdd = {
-        'id':item._id, 
-        'name':item.name
-      }
+     
 
-      const res = await axios.put('http://localhost:3001/cart')
-      console.log(res)
+      const res = await axios.put(`http://localhost:3001/cart/${item._id}`)
+      console.log(res,'response from updated cart')
+    }
+    const updateItem = async ()=>{
+      const res = await axios.put(`http://localhost:3001/item/${id}`, newItem)
+    }
+    const updateName = (e) =>{ 
+      setNewItem({ ...newItem, name: e.target.value })
     }
 
     useEffect(() => {
@@ -44,21 +49,26 @@ const Item = (props) => {
                   <Link to="/items">Back to Merch</Link>  
                 </h1>
                 <h1>
-                  <Link to="/cart/:id">View Cart</Link>
+                  <Link to={`/cart/${id}`}>View Cart</Link>
                   </h1>  
                 <h1>
                   <button onClick={updateCart} class="block">Add to Cart</button>
+                  
                 </h1>
               </div> 
-            </div>      
+           </div>      
           <div className='Item'>
              <h2>{item.name}</h2>
              <h3>{item.price} Eth</h3>
              <h3>{item.description}</h3>
              <img src={item.image} />
             </div> 
-          
-        </div>
+            <form>
+              <input  value={newItem.name} placeholder='enter new name' onChange={updateName} />
+              <button onClick={updateItem}>Update Item Name</button>
+            </form>
+            
+          </div>
     )
 
 }

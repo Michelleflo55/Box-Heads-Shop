@@ -3,7 +3,7 @@ const { Schema } = require('mongoose')
 const Shopping = new Schema(
     {
         price: {type: Number, required: true},
-        items: [{ type: Schema.Types.ObjectId, ref:'items' }]
+        items: [{ type:Object}]
     },
     { timestamps: true }
 )

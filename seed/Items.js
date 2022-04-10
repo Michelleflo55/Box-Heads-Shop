@@ -26,10 +26,12 @@ const main = async () => {
             image:'https://i.ibb.co/jrNcDgM/WAW-Gloves.png'
         },
     ]
-    await Item.insertMany(items) //the line that's actually being run on database insertMany will bring 2 objects from publishers
+    await Item.insertMany(items)
   console.log('Created items!')
 }
-const run = async () => {       //call function main from line 9
+const run = async () => {    
+    await Item.deleteMany()
+    await Item.deleteOne()
     await main() //we want this function to completely finish beffore we start db.close 
     db.close()
   }
@@ -37,4 +39,3 @@ const run = async () => {       //call function main from line 9
 
  run() 
 
- //like publishers

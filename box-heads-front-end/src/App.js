@@ -22,7 +22,7 @@ return (
         <Route path='/' element={ <Home setCartId={setCartId} /> } />
         <Route path='/items' element={ <Items />} />
         <Route path='/items/:id' element={ <Item cartId={cartId} />} />
-        <Route path='/cart' element={ <Cart cartId={cartId} />} />
+        <Route path='/cart/:id' element={ <Cart cartId={cartId} />} />
       </Routes>
 
     </main>
