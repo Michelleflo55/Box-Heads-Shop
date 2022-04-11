@@ -12,7 +12,7 @@ const app = express()
 //My code goes here
 app.use(cors()) 
 app.use(express.json())
-// app.use(urlencoded({require: false}))
+app.use(urlencoded({require: false}))
 app.use(express.static(`${__dirname}/client/build`))
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
@@ -65,7 +65,7 @@ app.post('/item', async(request, response)=> {
 //  }
 // })
 
-app.delete('/items/:id', async(req, res)=>{
+app.delete('/cart/:id', async(req, res)=>{
   try {
     const {id} = req.params.id
     const deletedItem = await Item.deleteOne({id})
@@ -109,3 +109,5 @@ app.get('/*', (req, res) => {
 // Code ends here 
 app.listen(PORT, () => console.log(`Server Listening on port: ${PORT}`))
 
+//to reset items node seed/items.js
+//node seed/shoppingCart.js
