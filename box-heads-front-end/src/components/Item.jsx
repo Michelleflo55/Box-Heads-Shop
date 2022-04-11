@@ -48,9 +48,7 @@ const Item = (props) => {
                 <h1>
                   <Link to="/items">Back to Merch</Link>  
                 </h1>
-                <h1>
-                  <Link to={`/cart/${id}`}>View Cart</Link>
-                  </h1>  
+                <h1><Link to={`/cart/${id}`}>View Cart</Link></h1>  
                 <h1>
                   <button onClick={updateCart} class="block">Add to Cart</button>
                   
@@ -62,11 +60,13 @@ const Item = (props) => {
              <h3>{item.price} Eth</h3>
              <h3>{item.description}</h3>
              <img src={item.image} />
-            </div> 
-            <form>
+            </div>
+           
+            <form class="center block">
+            <h1>Update  {item.name} and give it a cool WAW name!</h1>
               <input  value={newItem.name} placeholder='enter new name' onChange={updateName} />
-              <button onClick={updateItem}>Update Item Name</button>
-            </form>
+              <button onClick={updateItem} class="button">Update Item Name</button>
+            </form> 
             
           </div>
     )

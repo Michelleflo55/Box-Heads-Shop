@@ -40,7 +40,7 @@ export default function Cart(props) {
             </div>
           </div> 
         </div>       
-         <div>Price total: {priceOfCart}</div>
+         <div class="price">Price total: {priceOfCart}</div>
         <ul class="flexItems">
         {itemsInCart.map((item)=>{
             return(
