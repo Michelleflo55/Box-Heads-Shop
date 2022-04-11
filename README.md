@@ -36,6 +36,13 @@ App Preview
 
 &nbsp;
 
+### **Future to-do:**
+<ol>
+<li> Add Nft info component in front/back end
+<li> Add Pay option that works
+</ol>
+
+  &nbsp;
 ### **CHECK OUT MORE ON [TRELLO](https://trello.com/b/MzOTOm2l/box-heads)**
 
 &nbsp;
