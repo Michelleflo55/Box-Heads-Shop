@@ -47,7 +47,8 @@ app.put('/item/:id', async (req, res)=>{
 
 app.post('/item', async(request, response)=> {
   const item = await Item.create(request.body)
-  response.json(item)
+  await item.save()
+  return response.json(item)
 })
 
 //deletes item

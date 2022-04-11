@@ -13,6 +13,7 @@ body{
     flex-shrink: auto;
     padding:2%;
     margin: 1%
+    
 }
 
 .left-column{
@@ -85,4 +86,28 @@ Button decoration: https://www.w3schools.com/howto/howto_css_block_buttons.asp
     cursor:pointer;
     text-align: center;
    
+  }
+  
+  .flexItems{
+   
+    max-width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex: 2 1 auto;
+    flex-grow: auto;
+    flex-shrink: auto;
+    padding:2%;
+    margin: 1%
+  }
+
+  .center {
+    border: 10px solid rgb(0, 0, 0);
+    text-align: center;
+    margin: auto;
+    width: 20%;
+    cursor:pointer;
+    padding: 16px 28px;
+    font-size: 30px
   }

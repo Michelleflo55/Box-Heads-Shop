@@ -41,13 +41,13 @@ export default function Cart(props) {
           </div> 
         </div>       
          <div>Price total: {priceOfCart}</div>
-        <ul class="flex">
+        <ul class="flexItems">
         {itemsInCart.map((item)=>{
             return(
                 //total += price
-                <li>
+                <div>
                 <CartItem {...item}/>
-             </li>
+             </div>
             )
         })}
     

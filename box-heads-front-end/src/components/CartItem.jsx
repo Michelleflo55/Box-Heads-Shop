@@ -5,16 +5,12 @@ export default function CartItem(props) {
   
   
   return(
-      <li className="itemCarted" id={props.name}>
-          <h3>Item: {props.name}</h3>
+    <div class="flexItems" id={props.name}>
+          <h2>Item: {props.name}</h2>
           <h3>Price: {props.price}</h3>
           <img src={props.image} alt='image' />
-      </li>
+      
+    </div>
     )
 
-
-
-  return (
-    <div>CartItem</div>
-  )
 }
