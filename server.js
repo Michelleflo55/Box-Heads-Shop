@@ -65,11 +65,13 @@ app.post('/item', async(request, response)=> {
 //  }
 // })
 
-app.delete('/cart/:id', async(req, res)=>{
+app.delete('/items/:id', async(req, res)=>{
+  console.log(req.params.id)
   try {
-    const {id} = req.params.id
-    const deletedItem = await Item.deleteOne({id})
-    res.json(deletedItem, 'item has been deleted')
+    const id = req.params.id
+    const deletedItem = await Item.deleteOne({_id:id})
+    console.log(deletedItem)
+    res.send(deletedItem, 'item has been deleted')
   } catch (error) {
     return res.status(500).send(error.message);
   }

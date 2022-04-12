@@ -13,7 +13,17 @@ const Items = () => {
         image:'',
         item:''
     })
-
+    const [removeItem, setRemoveItem] = useState()
+    const getAllItems = async () => {
+      const res = await axios.get('http://localhost:3001/items')
+      console.log(res.data)
+      setItems(res.data)
+  }
+    const Delete = async (banana) => {
+      console.log(banana)
+      const res = await axios.delete(`http://localhost:3001/items/${banana}`)
+      getAllItems()
+    }
 
     const postItem = async () => {
         console.log(addItem, 'post method works')
@@ -33,11 +43,7 @@ const Items = () => {
       const postItemText = (e) =>{ 
         setAddItem({ ...addItem, item: e.target.value })
       }  
-    const getAllItems = async () => {
-        const res = await axios.get('http://localhost:3001/items')
-        console.log(res.data)
-        setItems(res.data)
-    }
+    
 
     useEffect(() => {
         console.log('got items from backend')
@@ -78,7 +84,9 @@ const Items = () => {
              <img src={item.image} />
             </Link>  
             </div>
-                           
+            <div>
+      <button class="block" onClick={()=>Delete(item._id)}>Remove Item</button>
+      </div>         
             </div>
             ))}
            </div> 
