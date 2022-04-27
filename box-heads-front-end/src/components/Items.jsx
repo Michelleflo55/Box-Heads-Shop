@@ -57,8 +57,8 @@ const Items = () => {
     return (
         <div className="font">
             <header>WAW MERCH</header>  
-            <h1 class="homeLink"><Link to="/">Home</Link> </h1>
-            <div class="center block">
+            <h1 class="item-header"><Link to="/">Home</Link> </h1>
+            <div class=" center ">
             <h1>
               Own a WAW already?
             </h1>
@@ -78,14 +78,15 @@ const Items = () => {
            <div class="flexItems">            
              {items.map((item)=>(
            <div> 
-           <h1>{item.name}</h1>
+           <h1 className='items-name'>{item.name} </h1>
+           <button class="button remove-itemButton" onClick={()=>Delete(item._id)}>Remove Item</button>
            <div class> 
             <Link to={`/items/${item._id}`}>  
-             <img src={item.image} />
+             <img src={item.image} className='items-image'/>
             </Link>  
             </div>
             <div>
-      <button class="block" onClick={()=>Delete(item._id)}>Remove Item</button>
+      
       </div>         
             </div>
             ))}

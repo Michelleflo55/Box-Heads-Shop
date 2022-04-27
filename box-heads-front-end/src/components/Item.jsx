@@ -40,8 +40,8 @@ const Item = (props) => {
 
     return(
         <div className="font">
-          <div className="header">
-              <div className="flex">
+          <div className="">
+              <div className="item-header">
                 <h1 className="homeLink">
                   <Link to="/">Home</Link>
                 </h1>
@@ -50,7 +50,7 @@ const Item = (props) => {
                 </h1>
                 <h1><Link to={`/cart/${id}`}>View Cart</Link></h1>  
                 <h1>
-                  <button onClick={updateCart} class="block">Add to Cart</button>
+                  <button onClick={updateCart} class="button block">Add to Cart</button>
                   
                 </h1>
               </div> 
@@ -58,8 +58,8 @@ const Item = (props) => {
           <div className='Item'>
              <h2>{item.name}</h2>
              <h3>{item.price} Eth</h3>
-             <h3>{item.description}</h3>
-             <img src={item.image} />
+             <h3 >{item.description}</h3>
+             <img className="items-images items-image "src={item.image} />
             </div>
            
             <form class="center block">

@@ -28,8 +28,8 @@ export default function Cart(props) {
   return (
     <div>
         <div className="font">
-          <div className="header">
-            <div className="flex">
+          <div className="">
+            <div className="item-header">
              <h1 className="homeLink">
               <Link to="/">Home</Link>
              </h1>
@@ -41,7 +41,7 @@ export default function Cart(props) {
           </div> 
         </div>       
          <div class="price">Price total: {priceOfCart}</div>
-        <ul class="flexItems">
+        <ul class="cart-items ">
         {itemsInCart.map((item)=>{
             return(
                 //total += price

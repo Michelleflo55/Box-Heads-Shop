@@ -2,7 +2,7 @@ const { urlencoded } = require('body-parser');
 const express = require('express');
 const db = require('./db');
 const cors = require('cors')
-const {Item, Shopping } = require('./models');
+const {Item, Shopping, Questions, Answers } = require('./models');
 const res = require('express/lib/response');
 
 const PORT = process.env.PORT || 3001
@@ -17,7 +17,16 @@ app.use(express.static(`${__dirname}/client/build`))
 
 db.on('error', console.error.bind(console, 'MongoDB connection error:'))
 
+// app.getAnswers('/', async ( req, res) => {
+//   const answers = await Answers.find({})
 
+//   res.json(answers)
+// })
+// app.getQuestions('/', async ( req, res) => {
+//   const questions = await Questions.find({})
+
+//   res.json(questions)
+// })
 
 app.get('/item/:id', async (request, response) => {
   console.log(request.params)
